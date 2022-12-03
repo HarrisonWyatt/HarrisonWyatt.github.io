@@ -8,7 +8,7 @@ import Stars from './stars.js'
 const App = () => {
   return (
     <div className="perm">
-  <Stars />
+  
   <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">Harrison Wyatt</Navbar.Brand>
