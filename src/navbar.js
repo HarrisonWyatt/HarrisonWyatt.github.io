@@ -1,17 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import './App.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Stars from './stars.js'
-const App = () => {
-  return (
-    <div className="perm">
-  <Stars />
-  <Navbar bg="light" expand="lg">
+import Container from 'react-bootstrap/Container';
+const Navs = () => { <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Harrison Wyatt</Navbar.Brand>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -32,8 +25,6 @@ const App = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  </div>
-  )
-};
+}
 
-export default App
+export default Navs;
