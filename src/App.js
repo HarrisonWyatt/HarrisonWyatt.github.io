@@ -1,38 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './home.css';
 import './App.css';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Stars from './stars.js'
+import Navs from './navbar.js'
 
 const App = () => {
   return (
-  
-  <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">Harrison Wyatt</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
+    <div>
+      <Container fluid>
+      <div><Stars /></div>
+        <Row >
+      <div><Navs /></div>
+        </Row>
+        <Row fluid>
+        <Col>
+      <img class="circular--square" src ={require('./pan.jpg')} alt='headshot' />
+      </Col>
+      </Row>
+      <Row>
+        <Col><p>Harrison Wyatt</p></Col>
+      </Row>
       </Container>
-    </Navbar>
-
+  </div>
   )
 };
 

@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import React, { useCallback } from "react";
 import { loadStarsPreset } from "tsparticles-preset-stars";
-
+import './home.css';
 const Stars = () => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
@@ -23,6 +23,7 @@ const Stars = () => {
   };
   return (
     <Particles
+      className="particles"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
