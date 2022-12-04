@@ -2,13 +2,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-const Navs = () => { <Navbar bg="light" expand="lg">
+import './home.css';
+function Navs() {
+  return (
+  <Navbar className='Navs' bg="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand className='navtitle'href="/">Harrison Wyatt</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -25,6 +28,7 @@ const Navs = () => { <Navbar bg="light" expand="lg">
         </Navbar.Collapse>
       </Container>
     </Navbar>
+  )
 }
 
 export default Navs;
