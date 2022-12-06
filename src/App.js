@@ -3,9 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './App.css';
-import Stars from './stars.js';
-import Navs from './navbar.js';
-import './home.css';
+import Stars from './components/stars.js';
+import Navs from '../src/routes/navbar.js';
+import '../src/css/home.css';
 import React, {useState} from 'react';
 const App = () => {
   const [counter, setCounter]  = useState(0);
