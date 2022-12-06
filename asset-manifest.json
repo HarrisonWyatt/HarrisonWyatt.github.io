@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/https//HarrisonWyatt.github.io/static/css/main.d0ffd5ac.css",
-    "main.js": "/https//HarrisonWyatt.github.io/static/js/main.75d444fd.js",
-    "static/js/787.28cb0dcd.chunk.js": "/https//HarrisonWyatt.github.io/static/js/787.28cb0dcd.chunk.js",
-    "static/media/pan.jpg": "/https//HarrisonWyatt.github.io/static/media/pan.6935240b68d07e4b1c08.jpg",
-    "index.html": "/https//HarrisonWyatt.github.io/index.html",
-    "main.d0ffd5ac.css.map": "/https//HarrisonWyatt.github.io/static/css/main.d0ffd5ac.css.map",
-    "main.75d444fd.js.map": "/https//HarrisonWyatt.github.io/static/js/main.75d444fd.js.map",
-    "787.28cb0dcd.chunk.js.map": "/https//HarrisonWyatt.github.io/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "./static/css/main.c7d73847.css",
+    "main.js": "./static/js/main.180aa3f3.js",
+    "static/js/787.28cb0dcd.chunk.js": "./static/js/787.28cb0dcd.chunk.js",
+    "static/media/pan.jpg": "./static/media/pan.6935240b68d07e4b1c08.jpg",
+    "index.html": "./index.html",
+    "main.c7d73847.css.map": "./static/css/main.c7d73847.css.map",
+    "main.180aa3f3.js.map": "./static/js/main.180aa3f3.js.map",
+    "787.28cb0dcd.chunk.js.map": "./static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0ffd5ac.css",
-    "static/js/main.75d444fd.js"
+    "static/css/main.c7d73847.css",
+    "static/js/main.180aa3f3.js"
   ]
 }
