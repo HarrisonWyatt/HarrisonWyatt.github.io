@@ -2,12 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './home.css';
 import './App.css';
-import Stars from './stars.js'
-import Navs from './navbar.js'
-
+import Stars from './stars.js';
+import Navs from './navbar.js';
+import './home.css';
+import React, {useState} from 'react';
 const App = () => {
+  const [counter, setCounter]  = useState(0);
+  // onClick={() => setcounter((prevCount) => prevCount = +1 )};
+
+
   return (
     <div>
       <Container fluid>
