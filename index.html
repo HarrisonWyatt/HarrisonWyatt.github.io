@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Business Name</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="container">
+    <h1>Your Business Name</h1>
+    <p class="tagline">Simple. Reliable. Professional.</p>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Short description of the business. What you do, who you help, and why you're different.
+      </p>
+    </section>
+
+    <section>
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Service One</h3>
+          <p>Brief explanation of service.</p>
+        </div>
+        <div class="card">
+          <h3>Service Two</h3>
+          <p>Brief explanation of service.</p>
+        </div>
+        <div class="card">
+          <h3>Service Three</h3>
+          <p>Brief explanation of service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+      <p>Phone: <a href="tel:+61000000000">+61 000 000 000</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Business Name</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
