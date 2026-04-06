@@ -75,9 +75,35 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>We can easily and instantly provide a quick quote over the phone or via email.</p>
-      <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-      <p>Phone: <a href="tel:+61000000000">+61 000 000 000</a></p>
+       
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+
+                <!-- Left info column -->
+                <div class="contact-info">
+                <p>Send us a message and let's discuss your project. Please include all the details so we can give you an accurate quote.</p>
+                <hr>
+                <p><strong>EMAIL:</strong> Cahill1807@gmail.com</p>
+                <p><strong>PHONE:</strong> +61 000 000 00</p>
+                <p><strong>ADDRESS:</strong> Perth</p>
+                <p><strong>HOURS:</strong> Perth - 6AM-6PM Mon-Fri | 7AM-2PM Sat</p>
+                </div>
+
+                <!-- Right form column -->
+                <form id="quote-form" class="contact-form">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="tel" name="mobile" placeholder="Phone">
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="suburb" placeholder="Suburb">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+                </form>
+
+            </div>
+            </section>
+
     </section>
 
   </main>
@@ -90,5 +116,23 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+
+
 </body>
 </html>
+
+
+<script>
+document.getElementById('quote-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  await fetch('/api/quote', {
+    method: 'POST',
+    body: formData
+  });
+
+  alert('Quote request sent');
+});
+</script>

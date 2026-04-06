@@ -63,7 +63,7 @@ footer {
   color: #777;
 }
 .nav {
-  background: #ffffff;
+  background: #9ce1ff;
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
@@ -132,4 +132,95 @@ footer {
   .hamburger {
     display: block;
   }
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px; /* adjust to your header height */
+}
+
+.contact-section {
+  background-color: #5cceff;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.contact-info hr {
+  border: 0;
+  border-top: 2px solid #fff;
+  margin: 1rem 0;
+  width: 50px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #9ce1ff;
+  color: #fff;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #5cceff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background-color: #e0e0ff;
 }
