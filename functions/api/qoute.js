@@ -17,7 +17,7 @@ export async function onRequestPost({ request, env }) {
     },
     body: JSON.stringify({
       from: 'onboarding@resend.dev',
-      to: 'completecleanperth@outlook.com',
+      to: 'hwyat@hotmail.com',
       subject: 'New Quote Request',
       html: `<p>${data.name} (${data.email}) (${data.mobile})</p><p>${data.suburb}</p><p>${data.message}</p>`
     })
@@ -25,3 +25,5 @@ export async function onRequestPost({ request, env }) {
 
   return new Response('OK');
 }
+
+/*completecleanperth@outlook.com*/
