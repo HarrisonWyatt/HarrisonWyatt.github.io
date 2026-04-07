@@ -1,4 +1,6 @@
-* {
+
+
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -63,7 +65,7 @@ footer {
   color: #777;
 }
 .nav {
-  background: #9ce1ff;
+  background: #5cceff;
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
@@ -93,7 +95,7 @@ footer {
 
 .menu a {
   text-decoration: none;
-  color: #444;
+  color: #000000;
   font-size: 0.95rem;
 }
 
@@ -223,4 +225,46 @@ section {
 
 .contact-form button:hover {
   background-color: #e0e0ff;
+}
+
+.hero-image {
+  position: relative; /* REQUIRED */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("basichero.jpg");
+  height: 40vh; /* 40% of viewport height */
+  min-height: 200px;
+  max-height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Place text in the middle of the image */
+.hero-text{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-image-services {
+  position: relative; /* REQUIRED */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("hero2.jpg");
+  height: 40vh; /* 40% of viewport height */
+  min-height: 200px;
+  max-height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Place text in the middle of the image */
+.hero-text-services {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
