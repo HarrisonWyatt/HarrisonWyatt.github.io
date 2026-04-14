@@ -27,8 +27,9 @@ export async function onRequestPost({ request, env }) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'onboarding@resend.dev',
+        from: 'Complete Clean Perth <quotes@completecleanperth.com.au>',
         to: 'completecleanperth@outlook.com',
+        reply_to: data.email,
         subject: 'New Quote Request',
         html: `
           <h2>New Quote Request</h2>
