@@ -10,9 +10,9 @@ export async function onRequestPost({ request, env }) {
       message: formData.get('message')
     };
 
-    if (!data.name || !data.email) {
+    if (!data.name || !data.email || !data.mobile || !data.message) {
       return new Response(
-        JSON.stringify({ error: 'Name and email are required' }),
+        JSON.stringify({ error: 'Please complete all required fields' }),
         {
           status: 400,
           headers: { 'Content-Type': 'application/json' }
@@ -28,7 +28,7 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         from: 'onboarding@resend.dev',
-        to: 'hwyat@hotmail.com',
+        to: 'completecleanperth@outlook.com',
         subject: 'New Quote Request',
         html: `
           <h2>New Quote Request</h2>
