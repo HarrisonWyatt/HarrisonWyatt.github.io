@@ -3,80 +3,74 @@ export async function onRequestPost({ request, env }) {
     const formData = await request.formData();
 
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      mobile: formData.get('mobile'),
-      suburb: formData.get('suburb'),
-      message: formData.get('message')
+      name: formData.get("name"),
+      email: formData.get("email"),
+      mobile: formData.get("mobile"),
+      suburb: formData.get("suburb"),
+      message: formData.get("message"),
     };
 
     if (!data.name || !data.email || !data.mobile || !data.message) {
       return new Response(
-        JSON.stringify({ error: 'Please complete all required fields' }),
+        JSON.stringify({ error: "Please complete all required fields" }),
         {
           status: 400,
-          headers: { 'Content-Type': 'application/json' }
-        }
+          headers: { "Content-Type": "application/json" },
+        },
       );
     }
 
-    const resendResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
+    const resendResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
       headers: {
-        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json'
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: 'Complete Clean Perth <quotes@completecleanperth.com.au>',
-        to: 'completecleanperth@outlook.com',
+        from: "Complete Clean Perth <quotes@completecleanperth.com.au>",
+        to: "completecleanperth@outlook.com",
         reply_to: data.email,
-        subject: 'New Quote Request',
+        subject: `New Quote Request – ${data.name}`,
         html: `
           <h2>New Quote Request</h2>
           <p><strong>Name:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Mobile:</strong> ${data.mobile || 'N/A'}</p>
-          <p><strong>Suburb:</strong> ${data.suburb || 'N/A'}</p>
-          <p><strong>Message:</strong><br>${data.message || 'N/A'}</p>
-        `
-      })
+          <p><strong>Mobile:</strong> ${data.mobile || "N/A"}</p>
+          <p><strong>Suburb:</strong> ${data.suburb || "N/A"}</p>
+          <p><strong>Message:</strong><br>${data.message || "N/A"}</p>
+        `,
+      }),
     });
 
     const resendText = await resendResponse.text();
-    console.log('Resend status:', resendResponse.status);
-    console.log('Resend body:', resendText);
+    console.log("Resend status:", resendResponse.status);
+    console.log("Resend body:", resendText);
 
     if (!resendResponse.ok) {
       return new Response(
         JSON.stringify({
-          error: 'Failed to send email',
+          error: "Failed to send email",
           resendStatus: resendResponse.status,
-          resendBody: resendText
+          resendBody: resendText,
         }),
         {
           status: 500,
-          headers: { 'Content-Type': 'application/json' }
-        }
+          headers: { "Content-Type": "application/json" },
+        },
       );
     }
 
-    return new Response(
-      JSON.stringify({ success: true }),
-      {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' }
-      }
-    );
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    console.error('Function error:', error);
+    console.error("Function error:", error);
 
-    return new Response(
-      JSON.stringify({ error: 'Server error' }),
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }
-      }
-    );
+    return new Response(JSON.stringify({ error: "Server error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
 /*completecleanperth@outlook.com*/
